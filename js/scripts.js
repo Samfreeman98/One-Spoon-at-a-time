@@ -1,4 +1,26 @@
-alert('Hello world');
+let pokemonList=[];
+pokemonList = [
+    { 
+        name: Blastoise,
+        type: ['Water'],
+        height: 1.6,
+    },
+    
+    { 
+        name: Umbreon,
+        type: ['Dark'],
+        height: 1,
+    },
 
-let favoriteFood = "Steak and Mashed Potatoes";
-document.write(favoriteFood);
+    { 
+        name: Eevee,
+        type: ['Normal'],
+        height: 0.3,
+    },
+
+    { 
+        name: Gengar,
+        type: ['Ghost','Poison'],
+        height: 1.5,
+    }
+]
