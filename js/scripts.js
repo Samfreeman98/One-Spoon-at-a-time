@@ -1,26 +1,28 @@
+// array with Pokemon objects
 let pokemonList=[];
 pokemonList = [
     { 
-        name: Blastoise,
+        name: "Blastoise",
         type: ['Water'],
         height: 1.6,
     },
     
     { 
-        name: Umbreon,
+        name: "Umbreon",
         type: ['Dark'],
         height: 1,
     },
 
     { 
-        name: Eevee,
+        name: "Eevee",
         type: ['Normal'],
         height: 0.3,
     },
 
     { 
-        name: Gengar,
+        name: "Gengar",
         type: ['Ghost','Poison'],
         height: 1.5,
     }
 ]
+
