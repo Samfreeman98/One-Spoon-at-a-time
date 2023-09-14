@@ -26,3 +26,14 @@ pokemonList = [
     }
 ]
 
+for (let i = 0; i < pokemonList.length; i++) {
+    let pokemonName = pokemonList[i].name;
+    let pokemonHeight = pokemonList[i].height;
+    
+    let label = '';
+    
+    if (pokemonHeight > 1.5) {label = " - Wow that's a big Pokemon!";
+    }
+  
+  document.write(`${pokemonName} (height: ${pokemonHeight}${label}) <br>`);
+  }
