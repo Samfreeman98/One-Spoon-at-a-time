@@ -26,6 +26,14 @@ let pokemonRepository = (function () {
                 height: 1.5,
             }
         ]
+    pokemonList.forEach(function (pokemon) {
+        console.log("Name:" + pokemon.name + " Type:" + pokemon.type + " Height:" + pokemon.height);
+        let label = "";
+        if (pokemon.height > 1.5) {
+            label = " - Wow that's a big Pokemon!";
+        }
+        document.write(`${pokemon.name} (height: ${pokemon.height}${label}) <br>`);
+    })
 
     function getAll() {
         return pokemonList;
