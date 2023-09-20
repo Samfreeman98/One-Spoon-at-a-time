@@ -23,19 +23,17 @@ pokemonList = [
         name: "Gengar",
         type: ['Ghost', 'Poison'],
         height: 1.5,
-    }
-]
-
-
-for (let i = 0; i < pokemonList.length; i++) {
-    let pokemonName = pokemonList[i].name;
-    let pokemonHeight = pokemonList[i].height;
-
-    let label = '';
-
-    if (pokemonHeight > 1.5) {
-        label = " - Wow that's a big Pokemon!";
+    function getAll() {
+        return pokemonList;
     }
 
-    document.write(`${pokemonName} (height: ${pokemonHeight}${label}) <br>`);
-}
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+    return {
+        getAll: getAll,
+        add: add
+    }
+
+})()
+
