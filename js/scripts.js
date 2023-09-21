@@ -45,6 +45,9 @@ let pokemonRepository = (function () {
        getAll: getAll,
        add: add
     }
-
-})()
-
+ 
+ })()
+ 
+ 
+ pokemonRepository.getAll().forEach(function (pokemon) {});
+ 
