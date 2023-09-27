@@ -62,11 +62,7 @@ let pokemonRepository = (function () {
 
 //forEach loop going over objects in array starting with index 0
 pokemonRepository.getAll().forEach(function (pokemon) {
-   console.log("Name:" + pokemon.name + " Type:" + pokemon.type + " Height:" + pokemon.height);
-   let label = "";
-   if (pokemon.height > 1.5) {
-      label = " - Wow that's a big Pokemon!";
-   }
-   document.write(`${pokemon.name} (height: ${pokemon.height}${label}) <br>`);
-})
+   pokemonRepository.addListItem(pokemon);
+});
+
 
