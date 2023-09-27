@@ -54,10 +54,12 @@ let pokemonRepository = (function () {
    //Returns an object with all functions assigned as keys
    return {
       getAll: getAll,
-      add: add
-   }
+      add: add,
+      addListItem: addListItem,
+      showDetails: showDetails
+   };
 
-})()
+})();
 
 
 //forEach loop going over objects in array starting with index 0
