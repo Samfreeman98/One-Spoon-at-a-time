@@ -1,5 +1,6 @@
-// array with Pokemon objects
 let pokemonRepository = (function () {
+
+   //array of pokemon objects
    let pokemonList = [{
       name: "Blastoise",
       type: ['Water'],
@@ -25,6 +26,7 @@ let pokemonRepository = (function () {
    }
    ]
 
+   //function to return pokemonList-array
    function getAll() {
       return pokemonList;
    }
@@ -32,6 +34,11 @@ let pokemonRepository = (function () {
    function add(pokemon) {
       pokemonList.push(pokemon);
    }
+      //Button text is the name of the pokemon
+      //Class is added for CSS styling
+      //allows buttons and list to show on webpage
+      //When buttons are clicked the pokemons names are logged
+   //Returns an object with all functions assigned as keys
    return {
       getAll: getAll,
       add: add
@@ -40,6 +47,7 @@ let pokemonRepository = (function () {
 })()
 
 
+//forEach loop going over objects in array starting with index 0
 pokemonRepository.getAll().forEach(function (pokemon) {
    console.log("Name:" + pokemon.name + " Type:" + pokemon.type + " Height:" + pokemon.height);
    let label = "";
