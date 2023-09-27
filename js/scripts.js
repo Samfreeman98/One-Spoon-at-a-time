@@ -34,8 +34,21 @@ let pokemonRepository = (function () {
    function add(pokemon) {
       pokemonList.push(pokemon);
    }
+
+
+   function addListItem(pokemon) {
+      //selecting the pokemon-list
+      let pokemonList = document.querySelector(".pokemon-list");
+
+      //Creating variables for list items and buttons. 
+      let listItem = document.createElement("li");
+      let button = document.createElement("button");
+
       //Button text is the name of the pokemon
+      button.innerText = pokemon.name;
       //Class is added for CSS styling
+      button.classList.add("button-class");
+
       //allows buttons and list to show on webpage
       //When buttons are clicked the pokemons names are logged
    //Returns an object with all functions assigned as keys
