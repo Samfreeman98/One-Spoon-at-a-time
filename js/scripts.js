@@ -50,6 +50,9 @@ let pokemonRepository = (function () {
       button.classList.add("button-class");
 
       //allows buttons and list to show on webpage
+      listItem.appendChild(button);
+      pokemonList.appendChild(listItem);
+
       //When buttons are clicked the pokemons names are logged
    //Returns an object with all functions assigned as keys
    return {
