@@ -1,18 +1,24 @@
-
+:root {
+    --primary-color: #616283; /*Ultra Violet*/
+    --Secondary-color: white; /*White*/
+    --Tertiary-color: black; /*Black*/
+    --Text-align: center;
+    
+}
 body {
-    background-color: black;
+    background-color: var(--Tertiary-color);
   }
   h1 {
-    color: #616283;
-    text-align: center;
+    color: var(--primary-color);
+    text-align: var(--Text-align);
   }
   .button-class {
-    background-color: #Bdd4e7; /*green*/
+    background-color: var(--primary-color);
     border: none;
-    color: #Bdd4e7;
+    color: var(--Secondary-color);
     height: 45px;
     width: 150px;
-    text-align: center;
+    text-align: var(--Text-align);
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
@@ -20,9 +26,9 @@ body {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
-    background-color: #616283;
-    color: white;
-    border: 2px black;
+    background-color: var(--primary-color);
+    color: var(--Secondary-color);
+    border: 2px var(--Tertiary-color);
   
   }
   
@@ -30,7 +36,7 @@ body {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: var(--Text-align);
     
     
     
