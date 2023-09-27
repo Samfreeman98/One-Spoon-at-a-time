@@ -54,6 +54,16 @@ let pokemonRepository = (function () {
       pokemonList.appendChild(listItem);
 
       //When buttons are clicked the pokemons names are logged
+      button.addEventListener("click", function (event) {
+         showDetails(pokemon.name);
+      });
+   }
+   function showDetails(pokemon) {
+      console.log(pokemon);
+
+   }
+
+
    //Returns an object with all functions assigned as keys
    return {
       getAll: getAll,
