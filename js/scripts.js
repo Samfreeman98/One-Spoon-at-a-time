@@ -22,7 +22,6 @@ let pokemonRepository = (function () {
     {
       name: 'Gengar',
       type: ['Ghost', 'Poison'],
-         showDetails(pokemon.name);
       height: 1.5
     }
   ]
@@ -55,6 +54,7 @@ let pokemonRepository = (function () {
 
     //When buttons are clicked the pokemons names are logged
     button.addEventListener('click', function (event) {
+      showDetails(pokemon)
     })
   }
   function showDetails (pokemon) {
