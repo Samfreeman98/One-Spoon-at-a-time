@@ -52,13 +52,23 @@ let pokemonRepository = (function () {
       });
   }
 
-  function loadList () {
-    return fetch(apiUrl);
-    add (pokemon);
-    let pokemon = {
-      name: item.name,
-      detailsUrl: item.url,
-    };
+  function loadDetails(item) {
+    let url = item.detailsUrl;
+    return fetch(url)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (details) {
+        item.imageUrl = details.sprites.front_default;
+        item.height = details.height;
+        item.types = details.type;
+      });
+  }
+
+  function showDetails(item) {
+    pokemonRepository.loadDetails(item).then(function () {
+      console.log(item);
+    });
   }
 
   //Returns an object with all functions assigned as keys
