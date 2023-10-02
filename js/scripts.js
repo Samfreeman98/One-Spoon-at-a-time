@@ -37,6 +37,15 @@ let pokemonRepository = (function () {
     console.log(pokemon)
   }
 
+  function loadList () {
+    return fetch(apiUrl);
+    add (pokemon);
+    let pokemon = {
+      name: item.name,
+      detailsUrl: item.url,
+    };
+  }
+
   //Returns an object with all functions assigned as keys
   return {
     getAll: getAll,
