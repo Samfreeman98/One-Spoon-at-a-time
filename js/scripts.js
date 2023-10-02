@@ -76,11 +76,15 @@ let pokemonRepository = (function () {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
-    showDetails: showDetails
-  }
-})()
+    loadList: loadList,
+    loadDetails: loadDetails,
+    showDetails: showDetails,
+  };
+})();
 
 //forEach loop going over objects in array starting with index 0
-pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.addListItem(pokemon)
-})
+pokemonRepository.loadList().then(function () {
+  pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
+});
