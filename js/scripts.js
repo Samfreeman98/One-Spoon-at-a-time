@@ -61,7 +61,7 @@ let pokemonRepository = (function () {
       .then(function (details) {
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
-        item.types = details.type;
+        item.types = details.types;
       });
   }
 
