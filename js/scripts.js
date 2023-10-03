@@ -3,13 +3,15 @@ let pokemonRepository = (function () {
   //pokemon API
   let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
 
+  function add(pokemon) {
+    if (typeof pokemon === "object" && "name" in pokemon) {
+      pokemonList.push(pokemon);
+    }
+  }
+
   //function to return pokemonList-array
   function getAll() {
     return pokemonList;
-  }
-
-  function add(pokemon) {
-    pokemonList.push(pokemon);
   }
 
   function addListItem(pokemon) {
