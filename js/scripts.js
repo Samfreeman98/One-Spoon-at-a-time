@@ -6,6 +6,8 @@ let pokemonRepository = (function () {
   function add(pokemon) {
     if (typeof pokemon === "object" && "name" in pokemon) {
       pokemonList.push(pokemon);
+    } else {
+      console.log("pokemon is not correct");
     }
   }
 
