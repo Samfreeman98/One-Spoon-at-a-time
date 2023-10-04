@@ -41,7 +41,31 @@ body {
     
     
   }
-  
+
+  #modal-container {
+    display: none;
+  }
+
+  #modal-container.is-visible {
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    Height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    /* show above other content */
+    z-index: 999;
+
+    /* allows scrolling if screen isn't high enough */
+    overflow: auto;
+
+    /* used to center modal */
+    display: grid;
+    text-align: center;
+  }
   
   @media all and (max-width:500px) {
       .grid {
