@@ -3,21 +3,24 @@
     --Secondary-color: white; /*White*/
     --Tertiary-color: black; /*Black*/
     --Text-align: center;
-    
+    --Modal-backgroud: #73956F;
 }
 body {
     background-color: var(--Tertiary-color);
+    text-transform: capitalize;
   }
   h1 {
+    font-size: 50px;
     color: var(--primary-color);
     text-align: var(--Text-align);
+  
   }
   .button-class {
     background-color: var(--primary-color);
     border: none;
     color: var(--Secondary-color);
     height: 45px;
-    width: 150px;
+    width: 200px;
     text-align: var(--Text-align);
     text-decoration: none;
     display: inline-block;
@@ -29,6 +32,7 @@ body {
     background-color: var(--primary-color);
     color: var(--Secondary-color);
     border: 2px var(--Tertiary-color);
+    text-transform: capitalize;
   
   }
   
@@ -37,13 +41,22 @@ body {
     display: flex;
     flex-direction: column;
     text-align: var(--Text-align);
-    
-    
+    justify-content: center;
     
   }
 
   #modal-container {
     display: none;
+    color: var(--Secondary-color);
+  }
+
+  #modal-container h1 {
+    color: var(--Secondary-color);
+  }
+
+  #modal-container p {
+    display: flex;
+    flex-flow: column nowrap;
   }
   
   #modal-container.is-visible {
@@ -71,11 +84,13 @@ body {
     margin: auto;
     display: inline-block;
     box-sizing: border-box;
-    background: #fff;
+    background: var(--Modal-backgroud);
     padding: 15px;
     width: 100%;
     max-width: 700px;
     text-align: center;
+    justify-content: center;
+
   }
   
   .modal-close {
@@ -83,9 +98,11 @@ body {
     -webkit-appearance: none;
     border: 0;
     background: none;
-    color: #777;
+    color: var(--Secondary-color);
     text-decoration: underline;
   }
+
+  
   
   
   @media all and (max-width:500px) {
