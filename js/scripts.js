@@ -97,7 +97,7 @@ let pokemonRepository = (function () {
     titleElement.innerText = title;
 
     let contentElement = document.createElement("p");
-    contentElement.innerText = text;
+    contentElement.innerText = "Height: " +text;
 
     let imageElement = document.createElement("img");
     imageElement.setAttribute("src", img);
@@ -135,11 +135,7 @@ let pokemonRepository = (function () {
 
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function () {
-      showModal(item.name, 
-        [item.types,
-         item.weight,
-         item.height],
-      item.imageUrl);
+      showModal(item.name, item.height, item.imageUrl);
     });
   }
 
