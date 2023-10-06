@@ -1,2 +1,2 @@
-# One-Spoon-at-a-time
- For those living with Chronic illnesses 
+# js-pokedex
+ My pokedex created with Javascript 
