@@ -95,6 +95,7 @@ let pokemonRepository = (function () {
             height: item.height,
             types: item.types,
             weight: item.weight,
+            abilities: item.abilities,
             detailsUrl: item.url,
           };
           add(pokemon);
