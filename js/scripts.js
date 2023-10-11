@@ -2,19 +2,14 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   //pokemon API
   let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
-  let modalContainer = document.querySelector("#modal-container");
-
-  function add(pokemon) {
-    if (typeof pokemon === "object" && "name" in pokemon) {
-      pokemonList.push(pokemon);
-    } else {
-      console.log("pokemon is not correct");
-    }
-  }
 
   //function to return pokemonList-array
   function getAll() {
     return pokemonList;
+  }
+
+  function add(pokemon) {
+    pokemonList.push(pokemon);
   }
 
   function addListItem(pokemon) {
