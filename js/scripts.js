@@ -14,23 +14,27 @@ let pokemonRepository = (function () {
 
   function addListItem(pokemon) {
     //selecting the pokemon-list
-    let pokemonList = document.querySelector(".pokemon-list");
+    let pokemonList = $(".pokemon-list");
 
     //Creating variables for list items and buttons.
-    let listItem = document.createElement("li");
-    let button = document.createElement("button");
+    let listItem = $("<li></li>");
+    let button = $("<button></button>");
+    listItem.addClass("list=group-item", "mx-auto");
 
     //Button text is the name of the pokemon
-    button.innerText = pokemon.name;
+    button.text(pokemon.name);
     //Class is added for CSS styling
-    button.classList.add("button-class");
+    button.addClass("button-class");
+
+    button.attr("data-target", "#exampleModal");
+    button.attr("data-toggle", "modal");
 
     //allows buttons and list to show on webpage
-    listItem.appendChild(button);
-    pokemonList.appendChild(listItem);
+    listItem.append(button);
+    pokemonList.append(listItem);
 
     //When buttons are clicked the pokemons names are logged
-    button.addEventListener("click", function (event) {
+    button.on("click", function () {
       showDetails(pokemon);
     });
   }
