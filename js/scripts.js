@@ -112,13 +112,16 @@ let pokemonRepository = (function () {
         return response.json();
       })
       .then(function (details) {
-        pokemon.imageUrl = details.sprites.front_default;
+        pokemon.imageUrlFront = details.sprites.front_default;
+        pokemon.imageUrlBack = details.sprites.back_default;
         pokemon.weight = details.weight;
         pokemon.height = details.height;
-        pokemon.types = [];
-        for (var i = 0; i < details.types.length; i++) {
-          pokemon.types.push(details.types[i].type.name);
-        }
+        pokemon.types = details.types.map(function (type) {
+          return type.type.name;
+        });
+        pokemon.abilities = details.abilities.map(function (ability) {
+          return ability.ability.name;
+        });
       })
       .catch(function (e) {
         console.error(e);
