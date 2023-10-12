@@ -19,7 +19,7 @@ let pokemonRepository = (function () {
     //Creating variables for list items and buttons.
     let listItem = $("<li></li>");
     let button = $("<button></button>");
-    listItem.addClass("list=group-item", "mx-auto");
+    listItem.addClass("list-group-item", "mx-auto");
 
     //Button text is the name of the pokemon
     button.text(pokemon.name);
@@ -42,7 +42,6 @@ let pokemonRepository = (function () {
   function showModal(pokemon) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
-    let modalHeader = $(".modal-header");
 
     //Clears excisting content of modal title and body
     modalTitle.empty();
