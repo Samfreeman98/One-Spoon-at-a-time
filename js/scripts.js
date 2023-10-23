@@ -24,7 +24,7 @@ let pokemonRepository = (function () {
     //Button text is the name of the pokemon
     btn.text(pokemon.name);
     //Class is added for CSS styling
-    btn.addClass("btn");
+    btn.addClass("btn btn-default");
 
     btn.attr("data-target", "#exampleModal");
     btn.attr("data-toggle", "modal");
@@ -38,6 +38,8 @@ let pokemonRepository = (function () {
       showDetails(pokemon);
     });
   }
+
+  
 
   function showModal(pokemon) {
     let modalBody = $(".modal-body");
