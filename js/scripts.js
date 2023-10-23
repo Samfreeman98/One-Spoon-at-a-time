@@ -39,9 +39,23 @@ let pokemonRepository = (function () {
     });
   }
 
+  function searchWrapper () {
+    let searchBar = $("searchBar");
+    searchBar.on("keyup", function() {
+      let searchString = target.value;
+    let filteredPokemon = pokemonList.filter((pokemon) => {
+      return ( 
+        pokemon.name.includes(searchString)
+      );
+    });
+    displayPokemon(filteredPokemon);
+   })}
+
+   
   function showModal(pokemon) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
+    let modal = $("modalBody modalTitle")
 
     //Clears excisting content of modal title and body
     modalTitle.empty();
@@ -81,8 +95,8 @@ let pokemonRepository = (function () {
     modalBody.append(imageElementFront);
     modalBody.append(imageElementBack);
 
-    showModal.on("hidden.bs.modal", function () {
-      find("modal").trigger("reset");
+    modal.on("hidden.bs.modal", function () {
+      $(this).find("modal").trigger("reset");
     });
   }
 
