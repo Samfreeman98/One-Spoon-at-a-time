@@ -39,7 +39,7 @@ let pokemonRepository = (function () {
     });
   }
 
-  function searchWrapper () {
+  function showSearchBar () {
     let searchBar = $("searchBar");
     searchBar.on("keyup", function() {
       let searchString = target.value;
@@ -51,7 +51,7 @@ let pokemonRepository = (function () {
     displayPokemon(filteredPokemon);
    })}
 
-   
+
   function showModal(pokemon) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
@@ -151,6 +151,18 @@ let pokemonRepository = (function () {
       showModal(pokemon);
     });
   }
+
+  function showSearchBar () {
+    let searchBar = $("searchBar");
+    searchBar.on("keyup", function() {
+      let searchString = target.value;
+    let filteredPokemon = pokemonList.filter((pokemon) => {
+      return ( 
+        pokemon.name.includes(searchString)
+      );
+    });
+    displayPokemon(filteredPokemon);
+   })}
 
   //Returns an object with all functions assigned as keys
   return {
