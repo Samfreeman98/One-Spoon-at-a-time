@@ -82,6 +82,11 @@ let pokemonRepository = (function () {
     modalBody.append(abilitiesElement);
     modalBody.append(imageElementFront);
     modalBody.append(imageElementBack);
+
+    showModal.on('hidden.bs.modal', function () {
+      find('modal').trigger('reset'); 
+    })
+    
   }
 
   function loadList() {
@@ -133,8 +138,14 @@ let pokemonRepository = (function () {
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       showModal(pokemon);
+
     });
   }
+
+
+
+
+  
 
   //Returns an object with all functions assigned as keys
   return {
